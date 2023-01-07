@@ -1,0 +1,27 @@
+{
+  "name": "puhelinluettelo",
+  "version": "2.0.0",
+  "description": "A fullstack application for 'puhelinluettelo'",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -r build && cd ../../osa2/puhelinluettelo && npm run build && xcopy .\\build ..\\..\\osa3\\puhelinluettelo\\build\\ /e /h",
+    "deploy": "flyctl deploy",
+    "deploy:full": "npm run build:ui && flyctl deploy"
+  },
+  "author": "leoalho",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.24.0",
+    "nodemon": "^2.0.20"
+  }
+}
