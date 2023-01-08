@@ -12,7 +12,6 @@ app.use(morgan(':method :url :status :response-time ms - :res[content-length] :b
 app.use(cors())
 app.use(express.static('frontend/build'))
 
-
 app.get('/api/persons', (req, res) => {
     Number.find({}).then(notes => {
         res.json(notes)
@@ -83,4 +82,3 @@ app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
     console.log(new Date().toUTCString())
 })
-

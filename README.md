@@ -1,1 +1,1 @@
-Exercise for part 12 of the fullstackopen course
+CICD Exercise for part 12 of the fullstackopen course. Project based on the phonebook app of parts 2 and 3 of the course.
