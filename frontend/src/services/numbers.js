@@ -17,4 +17,6 @@ const put = (newPerson) => {
     return axios.put(`${baseUrl}/${newPerson.id}`, newPerson)
 }
 
-export default {create, update, poista, put}
+const crud = {create, update, poista, put}
+
+export default crud

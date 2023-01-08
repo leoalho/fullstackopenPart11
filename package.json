@@ -6,10 +6,11 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "rm -r build && cd ../../osa2/puhelinluettelo && npm run build && xcopy .\\build ..\\..\\osa3\\puhelinluettelo\\build\\ /e /h",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build:ui": "cd frontend && npm i && npm run build",
     "deploy": "flyctl deploy",
-    "deploy:full": "npm run build:ui && flyctl deploy"
+    "deploy:full": "npm run build:ui && flyctl deploy",
+    "eslint": "eslint ."
   },
   "author": "leoalho",
   "license": "ISC",

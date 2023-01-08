@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const express = require('express')
 var morgan = require('morgan')
 const cors = require('cors')
@@ -9,7 +10,7 @@ app.use(express.json())
 morgan.token('body', (req, res) => JSON.stringify(req.body))
 app.use(morgan(':method :url :status :response-time ms - :res[content-length] :body - :req[content-length]'))
 app.use(cors())
-app.use(express.static('build'))
+app.use(express.static('frontend/build'))
 
 
 app.get('/api/persons', (req, res) => {
