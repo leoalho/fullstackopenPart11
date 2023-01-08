@@ -1,0 +1,15 @@
+name: Periodic Health Checking
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 8,20 * * *'
+
+jobs:
+  check_health:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check for heathy route
+        uses: jtalk/url-health-check-action@v2
+        with:
+          url: https://withered-feather-7451.fly.dev/
